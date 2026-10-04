@@ -181,7 +181,6 @@ example.local
 Windows will request credentials with permission to join the computer to the domain.
 
 Enter the credentials of a domain account with the appropriate permissions.
-<img width="1242" height="924" alt="12 renaming client" src="https://github.com/user-attachments/assets/48e482b9-1403-438f-a860-f20b7efd380e" />
 
 Example:
 
@@ -296,7 +295,7 @@ gpupdate /force
 This forces Windows to retrieve the latest Group Policy settings from the Domain Controller.
 
 The command should report that the computer and user policies were updated successfully.
-<img width="1007" height="548" alt="16 Drag and dropped GPO policies" src="https://github.com/user-attachments/assets/4a504399-24d8-439e-9120-4db83c3fbafc" />
+
 
 ---
 
@@ -330,26 +329,10 @@ USB Devices
 
 The exact list will depend on which GPOs were linked to the user's OU or computer's OU.
 
----
-
-# 14. Generate a Detailed Group Policy Report
-
-A more detailed report can be generated using:
-
-```cmd
-gpresult /h gp-report.html
-```
-
-This creates an HTML report containing detailed Group Policy information.
-
-The report can be opened in a web browser.
-
-This is useful when troubleshooting policies that are not being applied as expected.
-
 
 ---
 
-# 15. Final Lab Structure
+# 14. Final Lab Structure
 
 At this point, the home lab should resemble:
 
@@ -376,7 +359,7 @@ At this point, the home lab should resemble:
 
 ---
 
-# 23. Skills Demonstrated
+# 15. Skills Demonstrated
 
 This lab demonstrates hands-on experience with:
 
