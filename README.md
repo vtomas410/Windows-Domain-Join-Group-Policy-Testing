@@ -52,11 +52,12 @@ Before joining the computer to the domain, the client needed to communicate with
 
 1. Start the Windows client virtual machine.
 2. Open **Network & Internet Settings**.
-3. Open the network adapter settings.<img width="514" height="109" alt="5 Network Conections Change adapter settings" src="https://github.com/user-attachments/assets/44179f7d-c31a-48d6-9f82-53b2f5585d18" />
+3. Open the network adapter settings.
+<img width="514" height="109" alt="5 Network Conections Change adapter settings" src="https://github.com/user-attachments/assets/44179f7d-c31a-48d6-9f82-53b2f5585d18" />
 
-4. Locate the IPv4 configuration.<img width="1088" height="812" alt="6 Internet Protocol Version 4 TCP" src="https://github.com/user-attachments/assets/36cfddb7-ad27-4704-920a-3a06166aca8b" />
+5. Locate the IPv4 configuration.<img width="1088" height="812" alt="6 Internet Protocol Version 4 TCP" src="https://github.com/user-attachments/assets/36cfddb7-ad27-4704-920a-3a06166aca8b" />
 
-5. Configure the client with an IP address on the same network as the Domain Controller.
+6. Configure the client with an IP address on the same network as the Domain Controller.
 
 The client's DNS server should point to the **Domain Controller's IP address**.<img width="1046" height="818" alt="7 Set up IP adress Properties" src="https://github.com/user-attachments/assets/a9fd68a4-547c-4b54-a1fa-171b5924fcb0" />
 
