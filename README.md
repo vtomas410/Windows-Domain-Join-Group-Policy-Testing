@@ -92,8 +92,9 @@ ping <Domain-Controller-IP>
 Example:
 
 ```cmd
-ping 192.168.1.128
+ping 192.168.125.128
 ```
+<img width="1041" height="820" alt="10 Ping DNS address_2" src="https://github.com/user-attachments/assets/3c44390b-c18f-4cbc-8b5e-ff769817bacf" />
 
 A successful response confirms basic network connectivity.
 
@@ -112,6 +113,7 @@ Example:
 ```cmd
 nslookup example.local
 ```
+<img width="546" height="123" alt="11 5 Nslook up" src="https://github.com/user-attachments/assets/235033da-12e6-4643-a329-2d049f40d18d" />
 
 The DNS server returned should be the Domain Controller.
 
@@ -130,6 +132,8 @@ On the Windows Server:
 5. Verify that the domain is available.
 6. Open **Group Policy Management**.
 7. Verify that the previously created GPOs are present.
+<img width="1240" height="882" alt="11 verify GPO" src="https://github.com/user-attachments/assets/5dd41561-2dd8-4aa8-b7b6-ddc7b14cf402" />
+
 
 ---
 
@@ -167,6 +171,8 @@ example.local
 ```
 
 7. Select **OK**.
+<img width="1242" height="924" alt="12 renaming client" src="https://github.com/user-attachments/assets/1d28521f-f4e9-45d9-b82f-60ee16aa6666" />
+
 
 ---
 
@@ -175,6 +181,7 @@ example.local
 Windows will request credentials with permission to join the computer to the domain.
 
 Enter the credentials of a domain account with the appropriate permissions.
+<img width="1242" height="924" alt="12 renaming client" src="https://github.com/user-attachments/assets/48e482b9-1403-438f-a860-f20b7efd380e" />
 
 Example:
 
@@ -184,6 +191,7 @@ Password: ********
 ```
 
 If successful, Windows should display a message indicating that the computer has joined the domain.
+<img width="381" height="231" alt="14 welcome to domain" src="https://github.com/user-attachments/assets/ab319c6a-5cf8-41c5-a4e4-a9da41b5b9e8" />
 
 ---
 
@@ -202,6 +210,7 @@ The computer is now a member of the Active Directory domain.
 # 9. Log Into the Domain
 
 At the Windows login screen, select **Other User** if necessary.
+<img width="1037" height="287" alt="15 log into user" src="https://github.com/user-attachments/assets/8cce5bd0-dd97-4650-9a0d-79aad10a4b4a" />
 
 Enter a domain account.
 
