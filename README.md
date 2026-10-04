@@ -261,6 +261,8 @@ For better organization and Group Policy management:
 1. Right-click the computer object.
 2. Select **Move**.
 3. Select the appropriate OU.
+<img width="1244" height="794" alt="17 Move Comp1" src="https://github.com/user-attachments/assets/d7bf41f7-7a68-4c00-86b7-1528f2f99bf2" />
+<img width="518" height="518" alt="18 Move Comp1 verfied" src="https://github.com/user-attachments/assets/360e4d61-55de-4e25-8763-c8aa3ae524a8" />
 
 Example:
 
@@ -289,10 +291,12 @@ Run:
 ```cmd
 gpupdate /force
 ```
+<img width="578" height="393" alt="19 gpuupdate force" src="https://github.com/user-attachments/assets/d0ee1125-b764-4ac2-a932-5b486a6f26ad" />
 
 This forces Windows to retrieve the latest Group Policy settings from the Domain Controller.
 
 The command should report that the computer and user policies were updated successfully.
+<img width="1007" height="548" alt="16 Drag and dropped GPO policies" src="https://github.com/user-attachments/assets/4a504399-24d8-439e-9120-4db83c3fbafc" />
 
 ---
 
@@ -342,165 +346,10 @@ The report can be opened in a web browser.
 
 This is useful when troubleshooting policies that are not being applied as expected.
 
----
-
-# 15. Test the Desktop Wallpaper GPO
-
-If the desktop wallpaper GPO was created in the previous lab:
-
-1. Log into the domain using the test user.
-2. Allow Group Policy to update.
-3. Run:
-
-```cmd
-gpupdate /force
-```
-
-4. Log out and back in if necessary.
-5. Verify that the configured wallpaper has been applied.
-
-This confirms that the User Configuration portion of the GPO is working.
 
 ---
 
-# 16. Test the Drive Mapping GPO
-
-If a network drive GPO was configured:
-
-1. Log into the domain using the test account.
-2. Open **File Explorer**.
-3. Select **This PC**.
-4. Check the available network drives.
-
-The drive configured through Group Policy should appear automatically.
-
-Example:
-
-```text
-Network Locations
-
-E: Shared Drive
-```
-
----
-
-# 17. Test the Control Panel Restriction
-
-If the Control Panel restriction GPO was configured:
-
-1. Log into the domain user account.
-2. Attempt to open Control Panel.
-3. Verify that access is restricted.
-
-This demonstrates how Group Policy can be used to limit what standard users can modify on a workstation.
-
----
-
-# 18. Test the Password Policy
-
-Attempt to create or change a domain user's password.
-
-Verify that the password requirements configured through Group Policy are enforced.
-
-For example, if the policy requires a minimum length and complexity, a password that does not meet those requirements should be rejected.
-
----
-
-# 19. Test the USB Restriction
-
-If a removable-storage GPO was configured:
-
-1. Connect a USB storage device to the client.
-2. Attempt to access the device.
-3. Verify whether the configured Group Policy restriction is working.
-
-This demonstrates how Group Policy can be used as a basic endpoint security control.
-
----
-
-# 20. Troubleshooting Domain Join Problems
-
-If the Windows client cannot join the domain, check the following.
-
-### Check IP Configuration
-
-Run:
-
-```cmd
-ipconfig
-```
-
-Verify that the client has a valid IP address.
-
-### Check DNS
-
-Run:
-
-```cmd
-ipconfig /all
-```
-
-Verify that the DNS server points to the Domain Controller.
-
-### Test Connectivity
-
-```cmd
-ping <Domain-Controller-IP>
-```
-
-### Test Domain Resolution
-
-```cmd
-nslookup <domain-name>
-```
-
-### Refresh DNS
-
-```cmd
-ipconfig /flushdns
-```
-
-Then try joining the domain again.
-
----
-
-# 21. Troubleshooting Group Policy
-
-If a GPO does not apply:
-
-### Step 1 — Force an Update
-
-```cmd
-gpupdate /force
-```
-
-### Step 2 — Check Applied Policies
-
-```cmd
-gpresult /r
-```
-
-### Step 3 — Generate a Report
-
-```cmd
-gpresult /h gp-report.html
-```
-
-### Step 4 — Check the GPO Scope
-
-On the Domain Controller:
-
-**Group Policy Management → GPO → Scope**
-
-Verify:
-
-- The correct OU is linked.
-- The correct users/computers are located in the OU.
-- Security filtering is configured correctly.
-
----
-
-# 22. Final Lab Structure
+# 15. Final Lab Structure
 
 At this point, the home lab should resemble:
 
