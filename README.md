@@ -376,29 +376,18 @@ The lab provided practical experience with the complete workflow:
     ↓
     
 `Link GPO to OU`
-
-    ↓
+       ↓
     
 `Join Windows Client to Domain`
-
-     ↓
-     
+     ↓     
 `Log in with Domain User`
-
-     ↓
-     
+     ↓     
 `Force Group Policy Update`
-
-     ↓
-     
+     ↓     
 `Verify Applied Policies`
-
-     ↓
-     
+     ↓     
 `Test GPO Functionality`
-
-     ↓
-     
+     ↓     
 `Troubleshoot if Necessary`
 
 This represents a more realistic IT support environment where an administrator must not only configure policies but also verify that they are successfully reaching and affecting client machines.
