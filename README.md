@@ -372,12 +372,9 @@ This allowed me to move beyond simply creating GPOs and verify how they behave o
 The lab provided practical experience with the complete workflow:
 
 `Create GPO`
-
-    ↓
-    
+    ↓    
 `Link GPO to OU`
-       ↓
-    
+    ↓    
 `Join Windows Client to Domain`
      ↓     
 `Log in with Domain User`
