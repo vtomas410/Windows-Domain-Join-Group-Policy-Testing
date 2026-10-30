@@ -64,11 +64,12 @@ The client's DNS server should point to the **Domain Controller's IP address**.<
 
 Example:
 
-```text
-Client IP:        192.168.1.129
-Domain Controller: 192.168.1.128
-DNS Server:       192.168.1.128
-```
+`Client IP:        192.168.1.129`
+
+`Domain Controller: 192.168.1.128`
+
+`DNS Server:       192.168.1.128`
+
 <img width="1113" height="799" alt="8 ipconfig all to check" src="https://github.com/user-attachments/assets/4c22a76c-e2cc-4c12-a45b-0210064b7af9" />
 
 > The actual IP addresses used in the lab may be different.
@@ -85,15 +86,12 @@ Open Command Prompt on the Windows client.
 
 Test the Domain Controller:
 
-```cmd
-ping <Domain-Controller-IP>
-```
+`cmd ping <Domain-Controller-IP>`
 
 Example:
 
-```cmd
-ping 192.168.125.128
-```
+`cmd ping 192.168.125.128`
+
 <img width="1041" height="820" alt="10 Ping DNS address_2" src="https://github.com/user-attachments/assets/3c44390b-c18f-4cbc-8b5e-ff769817bacf" />
 
 A successful response confirms basic network connectivity.
@@ -104,15 +102,12 @@ A successful response confirms basic network connectivity.
 
 Test DNS by attempting to resolve the Active Directory domain.
 
-```cmd
-nslookup <domain-name>
-```
+` nslookup <domain-name>`
 
 Example:
 
-```cmd
-nslookup example.local
-```
+`cmd nslookup example.local`
+
 <img width="546" height="123" alt="11 5 Nslook up" src="https://github.com/user-attachments/assets/235033da-12e6-4643-a329-2d049f40d18d" />
 
 The DNS server returned should be the Domain Controller.
@@ -149,15 +144,11 @@ Alternatively:
 
 1. Press:
 
-```text
-Windows Key + R
-```
+`Windows Key + R`
 
 2. Enter:
 
-```text
-sysdm.cpl
-```
+`sysdm.cpl`
 
 3. Open the **Computer Name** tab.
 4. Select **Change**.
@@ -166,9 +157,7 @@ sysdm.cpl
 
 Example:
 
-```text
-example.local
-```
+`example.local`
 
 7. Select **OK**.
 <img width="1242" height="924" alt="12 renaming client" src="https://github.com/user-attachments/assets/1d28521f-f4e9-45d9-b82f-60ee16aa6666" />
@@ -184,10 +173,9 @@ Enter the credentials of a domain account with the appropriate permissions.
 
 Example:
 
-```text
-Username: Administrator
-Password: ********
-```
+`Username: Administrator`
+
+`Password: ********`
 
 If successful, Windows should display a message indicating that the computer has joined the domain.
 <img width="381" height="231" alt="14 welcome to domain" src="https://github.com/user-attachments/assets/ab319c6a-5cf8-41c5-a4e4-a9da41b5b9e8" />
@@ -215,15 +203,11 @@ Enter a domain account.
 
 Example:
 
-```text
-DOMAIN\jsmith
-```
+`DOMAIN\jsmith`
 
 or:
 
-```text
-jsmith@example.local
-```
+`jsmith@example.local`
 
 After successful authentication, the user will log into the domain-connected workstation.
 
@@ -287,9 +271,8 @@ After joining the domain, open Command Prompt on the client.
 
 Run:
 
-```cmd
-gpupdate /force
-```
+`cmd gpupdate /force`
+
 <img width="578" height="393" alt="19 gpuupdate force" src="https://github.com/user-attachments/assets/d0ee1125-b764-4ac2-a932-5b486a6f26ad" />
 
 This forces Windows to retrieve the latest Group Policy settings from the Domain Controller.
@@ -303,9 +286,7 @@ The command should report that the computer and user policies were updated succe
 
 Run:
 
-```cmd
-gpresult /r
-```
+`cmd gpresult /r`
 
 This displays the Group Policy information applied to the current user and computer.
 
@@ -373,8 +354,8 @@ This lab demonstrates hands-on experience with:
 - Organizational Units
 - Group Policy
 - GPO testing
-- `gpupdate`
-- `gpresult`
+- gpupdate
+- gpresult
 - Network troubleshooting
 - DNS troubleshooting
 - Windows client administration
@@ -390,22 +371,34 @@ This allowed me to move beyond simply creating GPOs and verify how they behave o
 
 The lab provided practical experience with the complete workflow:
 
-```text
-Create GPO
-     ↓
-Link GPO to OU
-     ↓
-Join Windows Client to Domain
-     ↓
-Log in with Domain User
-     ↓
-Force Group Policy Update
-     ↓
-Verify Applied Policies
-     ↓
-Test GPO Functionality
-     ↓
-Troubleshoot if Necessary
-```
+`Create GPO`
+
+    `↓`
+    
+`Link GPO to OU`
+
+    ` ↓`
+    
+`Join Windows Client to Domain`
+
+     `↓`
+     
+`Log in with Domain User`
+
+     `↓`
+     
+`Force Group Policy Update`
+
+     `↓`
+     
+`Verify Applied Policies`
+
+     `↓`
+     
+`Test GPO Functionality`
+
+     `↓`
+     
+`Troubleshoot if Necessary`
 
 This represents a more realistic IT support environment where an administrator must not only configure policies but also verify that they are successfully reaching and affecting client machines.
