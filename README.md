@@ -373,31 +373,31 @@ The lab provided practical experience with the complete workflow:
 
 `Create GPO`
 
-    `↓`
+    ↓
     
 `Link GPO to OU`
 
-    ` ↓`
+    ↓
     
 `Join Windows Client to Domain`
 
-     `↓`
+     ↓
      
 `Log in with Domain User`
 
-     `↓`
+     ↓
      
 `Force Group Policy Update`
 
-     `↓`
+     ↓
      
 `Verify Applied Policies`
 
-     `↓`
+     ↓
      
 `Test GPO Functionality`
 
-     `↓`
+     ↓
      
 `Troubleshoot if Necessary`
 
